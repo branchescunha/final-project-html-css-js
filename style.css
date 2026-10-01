@@ -132,16 +132,23 @@ nav a:hover {
 }
 
 #btn-tema {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--border);
     background: var(--surface-secondary);
     color: var(--text);
-    padding: 8px 12px;
     border-radius: var(--radius-small);
-    transition: background 0.2s, border-color 0.2s;
+    font-size: 18px;
+    line-height: 1;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
 }
 
 #btn-tema:hover {
     border-color: var(--primary);
+    transform: translateY(-1px);
 }
 
 /* Conteúdo principal */
@@ -529,7 +536,8 @@ footer .contato {
     }
 
     #btn-tema {
-        width: 100%;
+        width: 42px;
+        align-self: center;
     }
 
     main {

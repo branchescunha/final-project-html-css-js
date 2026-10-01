@@ -339,9 +339,19 @@ function atualizarBotaoTema() {
     if (
         document.body.classList.contains("dark")
     ) {
-        btnTema.textContent = "Tema claro";
+        btnTema.textContent = "☀️";
+        btnTema.setAttribute(
+            "aria-label",
+            "Ativar tema claro"
+        );
+        btnTema.title = "Ativar tema claro";
     } else {
-        btnTema.textContent = "Tema escuro";
+        btnTema.textContent = "🌙";
+        btnTema.setAttribute(
+            "aria-label",
+            "Ativar tema escuro"
+        );
+        btnTema.title = "Ativar tema escuro";
     }
 }
 

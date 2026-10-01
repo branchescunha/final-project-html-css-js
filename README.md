@@ -6,6 +6,7 @@ Landing page de portfólio pessoal com gerenciamento de tarefas, desenvolvida co
 
 - Apresentação pessoal
 - Tema claro e escuro
+- Alternância de tema com ícones de lua e sol
 - Cadastro de tarefas
 - Prioridades baixa, média e alta
 - Conclusão e remoção de tarefas
@@ -23,6 +24,11 @@ Landing page de portfólio pessoal com gerenciamento de tarefas, desenvolvida co
 - CSS3
 - JavaScript
 
-## Como executar
+## Estrutura do projeto
 
-Abra o arquivo `index.html` no navegador ou utilize a extensão Live Server no VS Code.
+```text
+.
+├── index.html
+├── style.css
+└── script.js
+```
