@@ -463,7 +463,7 @@ textarea {
 /* Contato */
 
 .contato {
-    margin-top: 0;
+    margin-top: var(--spacing);
 }
 
 #form-contato {
