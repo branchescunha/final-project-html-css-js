@@ -41,8 +41,13 @@ body.dark {
 
     --border: #374151;
 
+    --success: #22c55e;
     --success-bg: #163722;
+
+    --warning: #eab308;
     --warning-bg: #3b3013;
+
+    --danger: #ef4444;
     --danger-bg: #3d1f21;
 
     --shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
@@ -313,7 +318,7 @@ textarea {
     transform: translateY(-1px);
 }
 
-/* Erros e mensagens */
+/* Mensagens */
 
 .mensagem-erro {
     min-height: 20px;
@@ -329,7 +334,7 @@ textarea {
     font-size: 14px;
 }
 
-/* Ferramentas */
+/* Filtros e ordenação */
 
 .task-toolbar {
     display: flex;
@@ -395,6 +400,7 @@ textarea {
     border-radius: var(--radius-small);
     padding: 13px;
     transition: transform 0.2s, opacity 0.2s;
+    animation: aparecer 0.2s ease;
 }
 
 .tarefa-item:hover {
@@ -457,7 +463,7 @@ textarea {
 /* Contato */
 
 .contato {
-    margin-top: var(--spacing);
+    margin-top: 0;
 }
 
 #form-contato {
@@ -473,11 +479,21 @@ textarea {
 
 footer {
     border-top: 1px solid var(--border);
+    padding: 32px 0 24px;
+}
+
+footer .contato {
+    text-align: left;
+}
+
+.footer-copy {
+    margin: 24px 0 0;
     color: var(--text-light);
     text-align: center;
-    padding: 24px 0;
     font-size: 13px;
 }
+
+/* Animação */
 
 @keyframes aparecer {
     from {
@@ -489,10 +505,6 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.tarefa-item {
-    animation: aparecer 0.2s ease;
 }
 
 /* Responsividade */
@@ -524,6 +536,7 @@ footer {
 
     main {
         padding-top: 24px;
+        padding-bottom: 24px;
     }
 
     .main-grid {
