@@ -479,6 +479,22 @@ footer {
     font-size: 13px;
 }
 
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tarefa-item {
+    animation: aparecer 0.2s ease;
+}
+
 /* Responsividade */
 
 @media (max-width: 600px) {
