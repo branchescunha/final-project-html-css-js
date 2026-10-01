@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>André Cunha | Portfólio e Tarefas</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="#sobre" class="logo">André Cunha</a>
+
+            <nav aria-label="Navegação principal">
+                <a href="#sobre">Sobre</a>
+                <a href="#tarefas">Tarefas</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <button
+                id="btn-tema"
+                type="button"
+                aria-label="Alternar tema claro e escuro"
+            >
+                Tema
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="main-grid">
+
+            <section id="sobre" class="card">
+                <h1>Sobre mim</h1>
+
+                <img
+                    src="https://github.com/branchescunha.png"
+                    alt="Foto de perfil de André Cunha"
+                    class="perfil"
+                >
+
+                <h2>André Cunha</h2>
+
+                <p>
+                    Estudante de Ciência da Computação com foco em
+                    desenvolvimento de software e aplicações web.
+                </p>
+
+                <h3>Habilidades</h3>
+
+                <ul class="habilidades">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                </ul>
+            </section>
+
+            <section id="tarefas" class="card">
+                <div class="section-header">
+                    <div>
+                        <span class="section-label">Organização</span>
+                        <h2>Minhas tarefas</h2>
+                    </div>
+
+                    <p id="contador">0 tarefas pendentes</p>
+                </div>
+
+                <form id="form-tarefa">
+                    <div class="campo tarefa-campo">
+                        <label for="input-tarefa">Nova tarefa</label>
+
+                        <input
+                            type="text"
+                            id="input-tarefa"
+                            placeholder="O que precisa ser feito?"
+                        >
+                    </div>
+
+                    <div class="campo prioridade-campo">
+                        <label for="prioridade">Prioridade</label>
+
+                        <select id="prioridade">
+                            <option value="baixa">Baixa</option>
+                            <option value="media" selected>Média</option>
+                            <option value="alta">Alta</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Adicionar
+                    </button>
+                </form>
+
+                <p
+                    id="erro-tarefa"
+                    class="mensagem-erro"
+                    aria-live="polite"
+                ></p>
+
+                <div class="task-toolbar">
+                    <div class="filtros" aria-label="Filtros de tarefas">
+                        <button
+                            type="button"
+                            class="filtro ativo"
+                            data-filtro="todas"
+                        >
+                            Todas
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filtro"
+                            data-filtro="pendentes"
+                        >
+                            Pendentes
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filtro"
+                            data-filtro="concluidas"
+                        >
+                            Concluídas
+                        </button>
+                    </div>
+
+                    <div class="ordenacao">
+                        <label for="ordenar">Ordenar</label>
+
+                        <select id="ordenar">
+                            <option value="recentes">Mais recentes</option>
+                            <option value="prioridade">Prioridade</option>
+                        </select>
+                    </div>
+                </div>
+
+                <ul id="lista" class="lista-tarefas"></ul>
+
+                <p id="estado-vazio" class="estado-vazio">
+                    Nenhuma tarefa cadastrada.
+                </p>
+            </section>
+
+        </div>
+
+        <section id="contato" class="card contato">
+            <div class="section-header">
+                <div>
+                    <span class="section-label">Contato</span>
+                    <h2>Entre em contato</h2>
+                </div>
+            </div>
+
+            <form id="form-contato">
+                <div class="campo">
+                    <label for="nome">Nome</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        required
+                        placeholder="Seu nome"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="seuemail@exemplo.com"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem</label>
+
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        rows="5"
+                        required
+                        placeholder="Escreva sua mensagem"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Enviar mensagem
+                </button>
+
+                <p
+                    id="mensagem-contato"
+                    class="mensagem-sucesso"
+                    aria-live="polite"
+                ></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>André Cunha • HTML, CSS e JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
