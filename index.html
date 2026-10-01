@@ -103,7 +103,12 @@
                 ></p>
 
                 <div class="task-toolbar">
-                    <div class="filtros" aria-label="Filtros de tarefas">
+
+                    <div
+                        class="filtros"
+                        role="group"
+                        aria-label="Filtros de tarefas"
+                    >
                         <button
                             type="button"
                             class="filtro ativo"
@@ -133,10 +138,16 @@
                         <label for="ordenar">Ordenar</label>
 
                         <select id="ordenar">
-                            <option value="recentes">Mais recentes</option>
-                            <option value="prioridade">Prioridade</option>
+                            <option value="recentes">
+                                Mais recentes
+                            </option>
+
+                            <option value="prioridade">
+                                Prioridade
+                            </option>
                         </select>
                     </div>
+
                 </div>
 
                 <ul id="lista" class="lista-tarefas"></ul>
@@ -148,68 +159,74 @@
 
         </div>
 
-        <section id="contato" class="card contato">
-            <div class="section-header">
-                <div>
-                    <span class="section-label">Contato</span>
-                    <h2>Entre em contato</h2>
-                </div>
-            </div>
-
-            <form id="form-contato">
-                <div class="campo">
-                    <label for="nome">Nome</label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        required
-                        placeholder="Seu nome"
-                    >
-                </div>
-
-                <div class="campo">
-                    <label for="email">E-mail</label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        placeholder="seuemail@exemplo.com"
-                    >
-                </div>
-
-                <div class="campo">
-                    <label for="mensagem">Mensagem</label>
-
-                    <textarea
-                        id="mensagem"
-                        name="mensagem"
-                        rows="5"
-                        required
-                        placeholder="Escreva sua mensagem"
-                    ></textarea>
-                </div>
-
-                <button type="submit" class="btn-primary">
-                    Enviar mensagem
-                </button>
-
-                <p
-                    id="mensagem-contato"
-                    class="mensagem-sucesso"
-                    aria-live="polite"
-                ></p>
-            </form>
-        </section>
-
     </main>
 
-    <footer>
+    <footer id="contato">
         <div class="container">
-            <p>André Cunha • HTML, CSS e JavaScript</p>
+
+            <section class="card contato">
+                <div class="section-header">
+                    <div>
+                        <span class="section-label">Contato</span>
+                        <h2>Entre em contato</h2>
+                    </div>
+                </div>
+
+                <form id="form-contato">
+
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            required
+                            placeholder="Seu nome"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="seuemail@exemplo.com"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="5"
+                            required
+                            placeholder="Escreva sua mensagem"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Enviar mensagem
+                    </button>
+
+                    <p
+                        id="mensagem-contato"
+                        class="mensagem-sucesso"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+            </section>
+
+            <p class="footer-copy">
+                André Cunha • HTML, CSS e JavaScript
+            </p>
+
         </div>
     </footer>
 

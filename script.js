@@ -124,7 +124,8 @@ function renderizarTarefas() {
 
         texto.classList.add("tarefa-texto");
         texto.textContent = tarefa.texto;
-        texto.title = "Clique para concluir. Duplo clique para editar.";
+        texto.title =
+            "Clique para concluir. Duplo clique para editar.";
 
 
         let tempoClique;

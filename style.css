@@ -148,7 +148,7 @@ nav a:hover {
 
 main {
     padding-top: 42px;
-    padding-bottom: 42px;
+    padding-bottom: 0;
 }
 
 .main-grid {
@@ -462,10 +462,6 @@ textarea {
 
 /* Contato */
 
-.contato {
-    margin-top: var(--spacing);
-}
-
 #form-contato {
     display: grid;
     gap: 16px;
@@ -478,11 +474,11 @@ textarea {
 /* Footer */
 
 footer {
-    border-top: 1px solid var(--border);
-    padding: 32px 0 24px;
+    padding: var(--spacing) 0 24px;
 }
 
 footer .contato {
+    margin-top: 0;
     text-align: left;
 }
 
@@ -527,7 +523,9 @@ footer .contato {
     }
 
     nav {
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     #btn-tema {
@@ -536,7 +534,7 @@ footer .contato {
 
     main {
         padding-top: 24px;
-        padding-bottom: 24px;
+        padding-bottom: 0;
     }
 
     .main-grid {
